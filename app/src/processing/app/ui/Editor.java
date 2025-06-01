@@ -317,6 +317,11 @@ public abstract class Editor extends JFrame implements RunnerListener {
     // Set the window bounds and the divider location before setting it visible
     state.apply(this);
 
+    Boolean maxWindow = Preferences.getBoolean("editor.window.default.maximized");
+    if (maxWindow) {
+      setExtendedState(JFrame.MAXIMIZED_BOTH);
+    }
+
     // Set the minimum size for the editor window
     int minWidth =
       Toolkit.zoom(Preferences.getInteger("editor.window.width.min"));
