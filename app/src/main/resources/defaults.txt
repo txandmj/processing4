@@ -82,6 +82,8 @@ platform.auto_file_type_associations = true
 
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
+# To initialize the editor as maximized window
+editor.window.default.maximized = false
 
 # default size for the main window
 editor.window.width.default = 700

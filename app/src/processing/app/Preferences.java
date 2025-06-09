@@ -178,7 +178,9 @@ public class Preferences {
         String key = line.substring(0, equals).trim();
         String value = line.substring(equals + 1).trim();
         if (!isPlatformSpecific(key, value, platformSpecific)) {
-          table.put(key, value);
+          if(!table.containsKey(key)) {
+            table.put(key, value);
+          }
         }
       }
     }
